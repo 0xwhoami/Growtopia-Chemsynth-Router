@@ -6,4 +6,6 @@ How to Use
 2. Type your target color, ex (PPGBYYGRBP) 10 Colors
 3. Enter and Follow step by step
 
+How this work
+
 
