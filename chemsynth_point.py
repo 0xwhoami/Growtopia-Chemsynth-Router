@@ -1,4 +1,4 @@
-from chemsynth import *
+from chemsynth_tool import *
 
 class Chemsynth_point(object):
 	'''
