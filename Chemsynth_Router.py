@@ -47,12 +47,8 @@ def step1(chem, step = 1):			#basic step
 		do(chem, f_idx, idx, step)
 		step += 1
 
-
-
-print("Welcome to Synthetic Chemical Router")
-print("                        By ? and mrx\n\n")
 print("R = Red, Y = Yellow, G = Green, B = Blue, and P = Pink")
-print("10 Blocks of current tank, and 10 Blocks for target tank")
+print("10 Blocks of current tank, and 10 Blocks for target tank\n")
 
 dom = input("Type the colors of your current Chemsynth Tank: ").upper()
 tar = input("Type the colors of your target Chemsynth Tank: ").upper()
