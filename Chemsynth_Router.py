@@ -60,4 +60,4 @@ tar = input("Type the colors of your target Chemsynth Tank: ").upper()
 chem = Chemsynth_point(list(dom), list(tar))
 step1(chem)
 
-input("Press any key to quit")
+input("Press enter to quit")
