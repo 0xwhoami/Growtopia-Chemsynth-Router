@@ -67,6 +67,3 @@ class Chemsynth(object):
 			temp = self.dom[index+x]
 			self.dom[index+x] = self.dom[index-x]
 			self.dom[index-x] = temp
-	
-
-
