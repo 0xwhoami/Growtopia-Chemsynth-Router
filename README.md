@@ -7,6 +7,7 @@ How to Use
 3. Enter and Follow step by step
 
 How This Work
+
 This program uses the tool to make Chemsynth available in the chemsynth_tool file to perform tasks.
 chemsynth_point is the key for the program to work as expected. This file does a calculation that we can call good_change 
 and bad_change. good_change is blocks that have changed and have the same color as the target. bad_change is old blocks 
@@ -15,6 +16,7 @@ And the big job is in Chemsynth_Router file. This file decides with the brutefor
 choose the best block to use by the tool.
 
 How to Improve
+
 Well, the improve is hard to implement. Let me explain the problem.
 First I was confused deciding to provide enough color then arranging the puzzle, or arranging the puzzle then providing the color.
 If i choose the former, provide enough color then arrange the puzzle, the disadvantage is when providing colors that are 
