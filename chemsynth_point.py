@@ -55,14 +55,24 @@ class Chemsynth_point(object):
 			x += 1
 			
 	def __point_right(self, index):
-		if ((index == len(self.dom)-1) or (self.dom[index] != self.dom[index+1])) and self.tar[index] != self.dom[index]:
-			return True
-		return False
+		if index == len(self.dom)-1:
+			return 0
+		if self.dom[index] != self.dom[index+1] and self.dom[index] != self.tar[index]:
+			return 1
+		elif self.dom[index] == self.dom[index+1] and self.dom[index] == self.tar[index]:
+			return -1
+		else:
+			return 0
 
 	def __point_left(self, index):
-		if ((index == 0) or (self.dom[index] != self.dom[index-1])) and self.tar[index] != self.dom[index]:
-			return True
-		return False
+		if index == 0:
+			return 0
+		if self.dom[index] != self.dom[index-1] and self.dom[index] != self.tar[index]:
+			return 1
+		elif self.dom[index] == self.dom[index-1] and self.dom[index] == self.tar[index]:
+			return -1
+		else:
+			return 0
 
 	def replicator_point(self, index):		#return the point of replicator on selected tank
 		length = len(self.dom)
@@ -84,8 +94,8 @@ class Chemsynth_point(object):
 		old_block = [0]*block_changed
 		target_block = [0]*block_changed
 		new_block = [0]*block_changed
-		bonus_left = 1 if self.__point_left(index) else -1
-		bonus_right = 1 if self.__point_right(index) else -1
+		bonus_left = self.__point_left(index)
+		bonus_right = self.__point_right(index)
 		copy(old_block, self.dom, x, y)
 		copy(target_block, self.tar, x, y)
 		temp.catalyst(index)
