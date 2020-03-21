@@ -59,20 +59,14 @@ class Chemsynth_point(object):
 			return 0
 		if self.dom[index] != self.dom[index+1] and self.dom[index] != self.tar[index]:
 			return 1
-		elif self.dom[index] == self.dom[index+1] and self.dom[index] == self.tar[index]:
-			return -1
-		else:
-			return 0
+		return -1
 
 	def __point_left(self, index):
 		if index == 0:
 			return 0
 		if self.dom[index] != self.dom[index-1] and self.dom[index] != self.tar[index]:
 			return 1
-		elif self.dom[index] == self.dom[index-1] and self.dom[index] == self.tar[index]:
-			return -1
-		else:
-			return 0
+		return -1
 
 	def replicator_point(self, index):		#return the point of replicator on selected tank
 		length = len(self.dom)
