@@ -53,6 +53,16 @@ class Chemsynth_point(object):
 		for i in range(1, n+1):
 			list1[x] = list2[index+i]
 			x += 1
+			
+	def __point_right(self, index):
+		if ((index == len(self.dom)-1) or (self.dom[index] != self.dom[index+1])) and self.tar[index] != self.dom[index]:
+			return True
+		return False
+
+	def __point_left(self, index):
+		if ((index == 0) or (self.dom[index] != self.dom[index-1])) and self.tar[index] != self.dom[index]:
+			return True
+		return False
 
 	def replicator_point(self, index):		#return the point of replicator on selected tank
 		length = len(self.dom)
@@ -74,13 +84,14 @@ class Chemsynth_point(object):
 		old_block = [0]*block_changed
 		target_block = [0]*block_changed
 		new_block = [0]*block_changed
-
+		bonus_left = 1 if self.__point_left(index) else -1
+		bonus_right = 1 if self.__point_right(index) else -1
 		copy(old_block, self.dom, x, y)
 		copy(target_block, self.tar, x, y)
 		temp.catalyst(index)
 		copy(new_block, temp.dom, x, y)
 	
-		return self.__point1(new_block, target_block) - self.__point1(old_block, target_block)
+		return self.__point1(new_block, target_block) - self.__point1(old_block, target_block) + bonus_left + bonus_right
 
 	def stirrer_point(self, index):			#return the point of stirrer on selected tank
 		if (index == 0) or (index == len(self.dom)-1):
