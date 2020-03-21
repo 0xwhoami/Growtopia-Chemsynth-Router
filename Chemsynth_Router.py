@@ -50,10 +50,10 @@ def step1(chem, step = 1):			#basic step
 print("R = Red, Y = Yellow, G = Green, B = Blue, and P = Pink")
 print("10 Blocks of current tank, and 10 Blocks for target tank\n")
 
-dom = input("Type the colors of your current Chemsynth Tank: ").upper()
-tar = input("Type the colors of your target Chemsynth Tank: ").upper()
+while True:
 
-chem = Chemsynth_point(list(dom), list(tar))
-step1(chem)
+	dom = input("Type the colors of your current Chemsynth Tank: ").upper().strip()
+	tar = input("Type the colors of your target Chemsynth Tank: ").upper().strip()
 
-input("Press enter to quit")
+	chem = Chemsynth_point(list(dom), list(tar))
+	step1(chem)
