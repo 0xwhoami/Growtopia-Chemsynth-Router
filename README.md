@@ -6,8 +6,8 @@ Type -r [your current color here] [your target color here] (with -a optional for
 the list of allowed colors is r=red, y=yellow, g=green, b=blue, p=pink. type -h or --help for more information
 
 # Example
--r pygbpgrbgy bbypgrbrpb [enter]
--r pygbpgrbgy bbypgrbrpb -a [enter]
+1. -r pygbpgrbgy bbypgrbrpb [enter]
+2. -r pygbpgrbgy bbypgrbrpb -a [enter]
 
 # How This Work
 This program works by counting points from each tool available for each color box available, then providing a route based on the
