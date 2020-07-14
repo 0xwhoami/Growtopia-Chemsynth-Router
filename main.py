@@ -376,7 +376,7 @@ def welcome():
 def doc():
 	print("Chemsynth Router v 2.0 is an open source program written in Python 3\n"
               "created by whoami and mrx\n"
-              "source available at https://github.com/0xwhoami/Growtopia-Chemsynth-Router-V2\n")
+              "source available at https://github.com/0xwhoami/Growtopia-Chemsynth-Router\n")
 
 def help(parser):
 	parser.print_help()
