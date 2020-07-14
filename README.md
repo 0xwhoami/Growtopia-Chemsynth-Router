@@ -1,30 +1,28 @@
 # Growtopia-Chemsynth-Router
-This program helps you find the best way to compile a puzzle, but this program DOES NOT solve it up to 100%
+This program helps you find the best way to finish the Chemsynth puzzle in Growtopia game
 
-How to Use
-1. Type your current color, ex (RYPGYGGBRY) 10 Colors
-2. Type your target color, ex (PPGBYYGRBP) 10 Colors
-3. Enter and Follow step by step
+# How to Use
+Type -r [your current color here] [your target color here] (with -a optional for advance)
+the list of allowed colors is r=red, y=yellow, g=green, b=blue, p=pink
 
-How This Work
+# How This Work
+This program works by counting points from each tool available for each color box available, then providing a route based on the
+largest points gained. Then this program provides a route based on intelligence in using a catalyst whose work is assisted by a
+stirrer and a centrifuge. the characteristics of this second step if you see there are parts that are like "reverse" the steps
+the goal is to help the performance of the catalyst because in addition to changing the color to the next color in the color list,
+but the catalyst has the side effect of changing the same color as color on the current catalyst, therefore we use a stirrer and
+centrifuge to help it
 
-This program uses the tool to make Chemsynth available in the chemsynth_tool file to perform tasks.
-chemsynth_point is the key for the program to work as expected. This file does a calculation that we can call good_change 
-and bad_change. good_change is blocks that have changed and have the same color as the target. bad_change is old blocks 
-before they are changed compared to their color similarity to the target block.
-And the big job is in Chemsynth_Router file. This file decides with the bruteforce technique to choose the best tool and 
-choose the best block to use by the tool.
+# How to Improve
+to improve the work of this chemsynth router we can develop algorithms from chempoint and functions in main that are used to determine
+the best route, optimize the code that is not optimal, fix bugs, improve the quality of the interface, or even by documenting the source
+code.
 
-How to Improve
-
-Well, the improve is hard to implement. Let me explain the problem.
-First I was confused deciding to provide enough color then arranging the puzzle, or arranging the puzzle then providing the color.
-If i choose the former, provide enough color then arrange the puzzle, the disadvantage is when providing colors that are 
-possible when we arrange it first it turns out easier.
-if i choose the latter, the disadvantage is the same, namely when providing color because it can randomize the puzzle that has 
-been arranged into a mess.
-And many more!
-
-So this is the best choice I have, not implement the "Providing color", and stop at Bruteforce technique.
+# Last but NOT Least
+I opened the source code so that if anyone wants to learn about how the program is, they can see the source code. if you imagine how that
+big software can be made, imagine when you eat a super duper big burger, we don't eat it all at once but instead eat it little by little
+until we finish eating the big burger. that's how to build software little by little end to become big software. at first I was not sure
+but with my efforts I could make this Chemsynth Router program. last but not least realize the software of your dreams, and share with
+others.
 Thank you for reading this text, and of course using my source to improve your program or play the Growtopia.
 Have a nice day!
