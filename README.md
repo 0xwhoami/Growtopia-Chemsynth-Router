@@ -2,8 +2,12 @@
 This program helps you find the best way to finish the Chemsynth puzzle in Growtopia game
 
 # How to Use
-Type -r [your current color here] [your target color here] (with -a optional for advance)
-the list of allowed colors is r=red, y=yellow, g=green, b=blue, p=pink
+Type -r [your current color here] [your target color here] (with -a optional for advance).
+the list of allowed colors is r=red, y=yellow, g=green, b=blue, p=pink. type -h or --help for more information
+
+# Example
+-r pygbpgrbgy bbypgrbrpb [enter]
+-r pygbpgrbgy bbypgrbrpb -a [enter]
 
 # How This Work
 This program works by counting points from each tool available for each color box available, then providing a route based on the
