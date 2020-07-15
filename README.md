@@ -25,12 +25,11 @@ Routing based on the highest point of each tool and each item in the tank
 2 is not finished. Y should be G. we can catalyst on it, but wait. the right color is Y too, if we doing catalyst both of them will
 be changed to G, DAMN!! Stuck?? maybe. So what we have to do? you can change the color if you smart choosing helper tool like stirrer
 or centrifuge to help you. Ok let's start step 2 concept.
-CURRENT    TARGET
-[RYYBP] -> [RGYBP]
+CURRENT = [RYYBP], TARGET = [RGYBP]
 
-[RYYBP] -> [RYPBY] #stirrer block 4 or index 3
-[RYPBY] -> [RGPBY] #catalyst block 2 or index 1
-[RGPBY] -> [RGYBP] #stirrer block 4 or index 3
+a. [RYYBP] -> [RYPBY] #stirrer block 4 or index 3
+b. [RYPBY] -> [RGPBY] #catalyst block 2 or index 1
+c. [RGPBY] -> [RGYBP] #stirrer block 4 or index 3
 
 # How to Improve
 To improve the work of this chemsynth router we can develop algorithms from chempoint and functions in main that are used to determine
