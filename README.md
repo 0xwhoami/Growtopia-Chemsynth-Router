@@ -12,16 +12,16 @@ the list of allowed colors is r=red, y=yellow, g=green, b=blue, p=pink. type -h 
 ## How This Work
 This program works by counting points from each tool available for each color box available, then providing a route based on the
 largest points gained. Then this program provides a route based on intelligence in using a catalyst whose work is assisted by a
-stirrer and a centrifuge. the characteristics of this second step if you see there are parts that are like "reverse" the steps
+stirrer and a centrifuge. the characteristics of this second step if you see there are parts that are like *reverse* the steps
 the goal is to help the performance of the catalyst because in addition to changing the color to the next color in the color list,
 but the catalyst has the side effect of changing the same color as color on the current catalyst, therefore we use a stirrer and
 centrifuge to help it.
 
 ### 1. Step 1
-Routing based on the highest point of each tool and each item in the tank
+Routing based on the **highest point** of each tool and each item in the tank
 
 ### 2. Step 2
-"Smart Catalyst" concept. suppose you have color [RYYBP] as domain and [RGYBP] as target. as we can see the color at index 1 or item
+**Smart Catalyst** concept. suppose you have color [RYYBP] as domain and [RGYBP] as target. as we can see the color at index 1 or item
 2 is not finished. Y should be G. we can catalyst on it, but wait. the right color is Y too, if we doing catalyst both of them will
 be changed to G, DAMN!! Stuck?? maybe. So what we have to do? you can change the color if you smart choosing helper tool like stirrer
 or centrifuge to help you. Ok let's start step 2 concept.
@@ -36,7 +36,7 @@ To improve the work of this chemsynth router we can develop algorithms from chem
 the best route, optimize the code that is not optimal, fix bugs, improve the quality of the interface, or even by documenting the source
 code.
 
-## > Last but NOT Least
+## Last but NOT Least
 I opened the source code so that if anyone wants to learn about how the program is, they can see the source code. if you imagine how that
 big software can be made, imagine when you eat a super duper big burger, we don't eat it all at once but instead eat it little by little
 until we finish eating the big burger. that's how to build software little by little end to become big software. at first I was not sure
