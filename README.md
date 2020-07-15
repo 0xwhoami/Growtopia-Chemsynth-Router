@@ -12,7 +12,7 @@ the list of allowed colors is r=red, y=yellow, g=green, b=blue, p=pink. type -h 
 ## How This Work
 This program works by counting points from each tool available for each color box available, then providing a route based on the
 largest points gained. Then this program provides a route based on intelligence in using a catalyst whose work is assisted by a
-stirrer and a centrifuge. the characteristics of this second step if you see there are parts that are like *reverse* the steps
+stirrer and a centrifuge. the characteristics of this second step if you see there are parts that are like **reverse** the steps
 the goal is to help the performance of the catalyst because in addition to changing the color to the next color in the color list,
 but the catalyst has the side effect of changing the same color as color on the current catalyst, therefore we use a stirrer and
 centrifuge to help it.
