@@ -9,7 +9,6 @@ the list of allowed colors is
 - G = GREEN
 - B = BLUE
 - P = PINK
-Type -h or --help for more information
 
 ## Example
 1. -r pygbpgrbgy bbypgrbrpb [enter]
