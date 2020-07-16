@@ -3,7 +3,13 @@ This program helps you find the best way to finish the Chemsynth puzzle in Growt
 
 ## How to Use
 Type -r [your current color here] [your target color here] (with -a optional for advance).
-the list of allowed colors is r=red, y=yellow, g=green, b=blue, p=pink. type -h or --help for more information
+the list of allowed colors is 
+- R = RED
+- Y = YELLOW
+- G = GREEN
+- B = BLUE
+- P = PINK
+Type -h or --help for more information
 
 ## Example
 1. -r pygbpgrbgy bbypgrbrpb [enter]
