@@ -36,8 +36,9 @@ List of allowed color
     - P = PINK
 
 ## Example
-1. -r pygbpgrbgy bbypgrbrpb [enter]
-2. -r pygbpgrbgy bbypgrbrpb -a [enter]
+
+    -r pygbpgrbgy bbypgrbrpb [enter]
+    -r pygbpgrbgy bbypgrbrpb -a [enter]
 
 ## How This Work
 This program works by counting points from each tool available for each color box available, then providing a route based on the
