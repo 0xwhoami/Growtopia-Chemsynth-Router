@@ -1,14 +1,39 @@
 # Growtopia Chemsynth Router
 This program helps you find the best way to finish the Chemsynth puzzle in Growtopia game
 
-## How to Use
-Type -r [your current color here] [your target color here] (with -a optional for advance).
-the list of allowed colors is 
-- R = RED
-- Y = YELLOW
-- G = GREEN
-- B = BLUE
-- P = PINK
+## Usage
+To get a list of basic options and switches use
+
+    -h/--help
+    
+To get a short documentation use
+
+    -d/--doc
+    
+To get program version information use:
+
+    -v/--version
+
+To route Chemsynth use
+
+    -r/--route [domain color] [target color]
+
+To route Chemsynth and show state of tank use
+
+    -r/--route [domain color] [target color] -a/--advance
+
+To quit from the program use
+
+    -q/--quit
+
+List of allowed color
+
+
+    - R = RED
+    - Y = YELLOW
+    - G = GREEN
+    - B = BLUE
+    - P = PINK
 
 ## Example
 1. -r pygbpgrbgy bbypgrbrpb [enter]
