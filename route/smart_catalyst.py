@@ -42,7 +42,7 @@ def _is_safe(list1, index, direction):
 
 	# check if not safe
 	if list1[index] == list1[index+direction]:
-		return False			# not safe
+		return False				# not safe
 	# else it's safe
 	return True					# safe
 
@@ -154,6 +154,7 @@ def smart_catalyst(chem):
 			if state == FAIL:
 				break
 
+			# if already safe, or success to make safe, let's do it
 			else:
 				# executing go list
 				execute(chem, go)
@@ -163,7 +164,7 @@ def smart_catalyst(chem):
 
 				# do catalyst while safe state
 				while (chem._dom[index] != chem._tar[index] and _is_safe(chem._dom, index, LEFT) and
-				   	   _is_safe(chem._dom, index, RIGHT)):
+				       _is_safe(chem._dom, index, RIGHT)):
 					# catalyst it and append it
 					chem.catalyst(index)
 					to_do_list.append([CATALYST, index])
