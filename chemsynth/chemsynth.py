@@ -82,6 +82,11 @@ class Chemsynth:
 	def _encode_color(dom):
 		'''
 		encode color to index based on Chemsynth.color_table
+		'R' -> RED
+		'Y' -> YELLOW
+		'G' -> GREEN
+		'B' -> BLUE
+		'P' -> PINK
 		'''
 		for index in range(len(dom)):
 			dom[index] = find(Chemsynth.color_table, dom[index])
@@ -90,6 +95,11 @@ class Chemsynth:
 	def _decode_color(dom):
 		'''
 		decode index to color based on Chemsynth.color_table
+		RED    -> 'R'
+		YELLOW -> 'Y'
+		GREEN  -> 'G'
+		BLUE   -> 'B'
+		PINK   -> 'P'
 		'''
 		for index in range(len(dom)):
 			dom[index] = Chemsynth.color_table[dom[index]]
