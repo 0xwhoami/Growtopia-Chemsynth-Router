@@ -15,7 +15,7 @@ def route(dom, tar):
     chem = ChemsynthPoint(dom, tar)
     to_do_list = []
 
-	# routing as can as possible
+    # routing as possible
     while True:
         # routing
         temp = point_route(chem)
