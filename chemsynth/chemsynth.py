@@ -157,17 +157,17 @@ class Chemsynth:
 		'''
 		produce a maximum block range that can be affected by a catalyst
 		'''
-		x, y = index, index
+		start, end = index, index
 
 		# calculating start index
-		while x-1 > -1 and tank[x-1] == tank[index]:
-			x -= 1
+		while start-1 > -1 and tank[start-1] == tank[index]:
+			start -= 1
 
 		# calculating end index
-		while y+1 < len(tank) and tank[y+1] == tank[index]:
-			y += 1
+		while end+1 < len(tank) and tank[end+1] == tank[index]:
+			end += 1
 
-		return (x, y+1)		# return (start index, after end index)
+		return (start, end+1)
 
 	# =========
 	# Interface
@@ -199,13 +199,13 @@ class Chemsynth:
 		same color.
 		'''
 		# get range start from x, end at y (excluding y)
-		x, y = self.__catalyst_range(self._dom, index)
+		start, after_end = self.__catalyst_range(self._dom, index)
 
 		# change color to the next color
 		self._dom[index] = (self._dom[index] + 1) % len(Chemsynth.color_table)
 
 		# side effect of catalyst, affect all the same color before color changed
-		for i in range(x, y):
+		for i in range(start, after_end):
 			self._dom[i] = self._dom[index]
 
 	def stirrer(self, index):
