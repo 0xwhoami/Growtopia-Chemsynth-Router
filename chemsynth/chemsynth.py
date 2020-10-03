@@ -6,6 +6,7 @@ See the file 'LICENSE' for copying permission
 """
 
 # absolute import
+from random import randint
 from helper.helper_func import find
 
 __all__ = ['Chemsynth',
@@ -36,7 +37,11 @@ class UnidentifiedColor(ChemsynthException): pass
 
 class Chemsynth:
 	'''
-	provide tools needed to make Chemsynth
+	"Tired of the lousy chemicals nature has to offer? Create new synthetic ones! With a Rare
+	Chemsynth Processor, Chemsynth Tanks, and one each of the five Chemsynth tools, you
+	can be whipping up Synthetic Chemicals in no time. Warning: Chemsynth solving is a pretty
+	tricky puzzle, and it costs a whole bunch of the five basic chemicals (R, G, B, P, and Y) to
+	complete."
 	'''
 
 	# ============
@@ -173,13 +178,18 @@ class Chemsynth:
 	# Interface
 	# =========
 
-	def solvent(self):		# undefined due to randomable rightmost element
-		pass
+	def solvent(self, index):
 		'''
 		Use on a highlighted Chemsynth Tank to dissolve it,
 		shifting chemicals left to fill in the gap. A random
 		chemical is added in the rightmost tank.
 		'''
+		# shifting block to the left
+		for i in range(1, len(self._dom)):
+			self._dom[i-1] = self._dom[i]
+
+		# random color in rightmost tank
+		self._dom[len(self._dom)-1] = randint(0, len(self._dom)-1)
 
 	def replicator(self, index):
 		'''
@@ -216,9 +226,8 @@ class Chemsynth:
 		'''
 		# out of range mitigation
 		if not(index == 0 or index == len(self._dom)-1):
-
 			# swap color
-			self._dom[index-1], self._dom[index+1] =  self._dom[index+1], self._dom[index-1]
+			self._dom[index-1], self._dom[index+1] = self._dom[index+1], self._dom[index-1]
 
 	def centrifuge(self, index):
 		'''
@@ -232,4 +241,4 @@ class Chemsynth:
 
 		# swap color
 		for x in range(1, range_plus_or_minus+1):
-			self._dom[index-x], self._dom[index+x] =  self._dom[index+x], self._dom[index-x]
+			self._dom[index-x], self._dom[index+x] = self._dom[index+x], self._dom[index-x]
