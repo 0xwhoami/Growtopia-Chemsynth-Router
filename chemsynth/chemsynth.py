@@ -37,11 +37,7 @@ class UnidentifiedColor(ChemsynthException): pass
 
 class Chemsynth:
 	'''
-	"Tired of the lousy chemicals nature has to offer? Create new synthetic ones! With a Rare
-	Chemsynth Processor, Chemsynth Tanks, and one each of the five Chemsynth tools, you
-	can be whipping up Synthetic Chemicals in no time. Warning: Chemsynth solving is a pretty
-	tricky puzzle, and it costs a whole bunch of the five basic chemicals (R, G, B, P, and Y) to
-	complete."
+	This class provides all the tools Chemsynth needs
 	'''
 
 	# ============
@@ -67,6 +63,12 @@ class Chemsynth:
 
 		# encode color
 		self._encode_color(self._dom)
+
+	def __eq__(self, other):
+		return self._dom == other._dom
+
+	def __len__(self):
+		return len(self._dom)
 
 	def __repr__(self):
 		return repr(self._dom)
@@ -142,7 +144,7 @@ class Chemsynth:
 		'''
 		produce a maximum block distance that can be affected by a centrifuge
 		'''
-		mid = length >> 1						# length // 2
+		mid = length >> 1			# length // 2
 		max_value = (mid) - ((length & 1)^1)	# length % 2 == length & 1
 
 		# calculating
@@ -189,7 +191,7 @@ class Chemsynth:
 			self._dom[i-1] = self._dom[i]
 
 		# random color in rightmost tank
-		self._dom[len(self._dom)-1] = randint(0, len(self._dom)-1)
+		self._dom[len(self._dom)-1] = randint(RED, PINK)
 
 	def replicator(self, index):
 		'''
