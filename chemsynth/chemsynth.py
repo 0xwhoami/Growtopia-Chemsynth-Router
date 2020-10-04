@@ -44,8 +44,8 @@ class Chemsynth:
 	# Class Member
 	# ============
 
-	__slots__ = ['_dom']
-	_virtual = ['dom']
+	__slots__ = ('_dom')
+	_virtual = ('dom')
 
 	# list of expected input color string
 	color_table = ('R', 'Y', 'G', 'B', 'P')
