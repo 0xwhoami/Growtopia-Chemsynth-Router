@@ -33,8 +33,8 @@ class ChemsynthPoint(Chemsynth):
 	# Class Member
 	# ============
 
-	__slots__ = ['_dom', '_tar']
-	_virtual = ['dom', 'tar']
+	__slots__ = ('_dom', '_tar')
+	_virtual = ('dom', 'tar')
 
 	# ========================
 	# Class Building Functions
