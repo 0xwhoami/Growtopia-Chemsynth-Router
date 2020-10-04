@@ -10,7 +10,7 @@ To get a short documentation use
 
     -d/--doc
     
-To get program version information use:
+To get program version information use
 
     -v/--version
 
